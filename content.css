@@ -1,0 +1,25 @@
+/* YTT Injector - Estilos CSS */
+
+/* Container principal */
+#ytt-subtitle-overlay {
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Container de cada cue */
+.ytt-cue-container {
+    line-height: 1.3;
+    letter-spacing: 0.01em;
+}
+
+/* Texto */
+.ytt-cue-text {
+    display: inline;
+    vertical-align: baseline;
+}
+
+/* Garantir que o overlay não interfira com controles */
+#ytt-subtitle-overlay * {
+    pointer-events: none !important;
+}

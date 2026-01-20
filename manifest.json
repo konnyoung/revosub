@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "RevoSub",
+  "version": "1.3.0",
+  "description": "Injeta legendas .ytt customizadas em vídeos do YouTube com suporte a cores e estilos",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://youtube.com/*",
+    "https://auth.kennyy.com.br/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/revosub-logo.png",
+      "48": "icons/revosub-logo.png",
+      "128": "icons/revosub-logo.png"
+    }
+  },
+  "icons": {
+    "16": "icons/revosub-logo.png",
+    "48": "icons/revosub-logo.png",
+    "128": "icons/revosub-logo.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*", "https://youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ]
+}
