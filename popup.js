@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', init);
 
 let selectedFile = null;
 let fileContent = null;
+let fileFormat = null; // 'ytt', 'vtt', 'ass'
 let currentUser = null;
 let authToken = null;
 let currentVideoId = null;
@@ -245,14 +246,27 @@ async function init() {
             headers['Authorization'] = `Bearer ${authToken}`;
         }
         
-        const response = await fetch(`${API_URL}${endpoint}`, {
-            ...options,
-            headers
-        });
+        let response;
+        try {
+            response = await fetch(`${API_URL}${endpoint}`, {
+                ...options,
+                headers
+            });
+        } catch (networkError) {
+            console.error('Network error:', networkError);
+            throw new Error('Erro de conexão. Verifique sua internet.');
+        }
         
         if (!response.ok) {
-            const error = await response.json().catch(() => ({ error: 'Request failed' }));
-            throw new Error(error.error || 'API Error');
+            let errorMessage = 'Erro no servidor';
+            try {
+                const error = await response.json();
+                errorMessage = error.error || error.message || `Erro ${response.status}`;
+            } catch {
+                errorMessage = `Erro ${response.status}: ${response.statusText}`;
+            }
+            console.error('API Error:', response.status, errorMessage);
+            throw new Error(errorMessage);
         }
         
         return response.json();
@@ -289,6 +303,7 @@ async function init() {
                     title: title,
                     content: fileContent,
                     language: langSelect.value,
+                    format: fileFormat || 'ytt', // Incluir formato detectado
                     isPublic: isPublicCheckbox.checked
                 })
             });
@@ -374,63 +389,6 @@ async function init() {
         }
     }
     
-    async function loadPublicSubtitles() {
-        const container = document.getElementById('publicSubtitlesList');
-        
-        if (!currentVideoId) {
-            container.innerHTML = `
-                <div class="empty-state">
-                    <div class="icon">🎥</div>
-                    <p>Abra um vídeo do YouTube para buscar legendas</p>
-                </div>
-            `;
-            return;
-        }
-        
-        try {
-            const data = await apiRequest(`/api/subtitles/video/${currentVideoId}`);
-            
-            if (!data.subtitles || data.subtitles.length === 0) {
-                container.innerHTML = `
-                    <div class="empty-state">
-                        <div class="icon">🔍</div>
-                        <p>Nenhuma legenda encontrada para este vídeo</p>
-                    </div>
-                `;
-                return;
-            }
-            
-            container.innerHTML = data.subtitles.map(sub => `
-                <div class="subtitle-item" data-id="${sub.id}">
-                    <div class="icon">📄</div>
-                    <div class="info">
-                        <div class="name">${sub.language}</div>
-                        <div class="meta">Por ${sub.User?.username || 'Anônimo'} • ${sub.downloads || 0} downloads</div>
-                    </div>
-                    <div class="actions">
-                        <button class="action-btn use-btn" data-id="${sub.id}">▶️ Usar</button>
-                    </div>
-                </div>
-            `).join('');
-            
-            container.querySelectorAll('.use-btn').forEach(btn => {
-                btn.addEventListener('click', async (e) => {
-                    e.stopPropagation();
-                    const id = btn.dataset.id;
-                    await downloadAndInject(id);
-                });
-            });
-            
-        } catch (e) {
-            container.innerHTML = `
-                <div class="empty-state">
-                    <div class="icon">❌</div>
-                    <p>Erro ao buscar legendas</p>
-                </div>
-            `;
-        }
-    }
-    
     async function downloadAndInject(id) {
         try {
             setStatus('info', '⏳ Baixando legenda...');
@@ -470,11 +428,8 @@ async function init() {
                 
                 if (response && response.videoId) {
                     currentVideoId = response.videoId;
-                    videoIdSpan.textContent = response.videoId;
-                    videoInfo.classList.remove('hidden');
-                    
-                    // Load public subtitles for this video
-                    loadPublicSubtitles();
+                    if (videoIdSpan) videoIdSpan.textContent = response.videoId;
+                    if (videoInfo) videoInfo.classList.remove('hidden');
                     
                     // Update language selector to show existing languages
                     updateLanguageSelector(response.videoId);
@@ -578,7 +533,17 @@ async function init() {
             const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
             const tab = tabs[0];
             
-            const format = content.includes('<?xml') || content.includes('<timedtext') ? 'ytt' : 'vtt';
+            // Detectar formato se não foi especificado
+            let format = fileFormat;
+            if (!format) {
+                if (content.includes('<?xml') || content.includes('<timedtext')) {
+                    format = 'ytt';
+                } else if (content.includes('[Script Info]') || content.includes('[V4+ Styles]')) {
+                    format = 'ass';
+                } else {
+                    format = 'vtt';
+                }
+            }
             
             return new Promise((resolve, reject) => {
                 chrome.tabs.sendMessage(tab.id, {
@@ -628,8 +593,6 @@ async function init() {
             // Load data when switching tabs
             if (tab.dataset.tab === 'cloud') {
                 loadMySubtitles();
-            } else if (tab.dataset.tab === 'browse') {
-                loadPublicSubtitles();
             }
         });
     });
@@ -639,6 +602,24 @@ async function init() {
         const file = e.target.files[0];
         if (!file) return;
         
+        const ext = file.name.split('.').pop().toLowerCase();
+        const supportedFormats = ['ytt', 'vtt', 'srt', 'ass', 'ssa', 'xml'];
+        
+        // Verificar se o formato é suportado
+        if (!supportedFormats.includes(ext)) {
+            setStatus('error', `❌ Formato .${ext} não suportado. Use: .ytt, .vtt, .srt, .ass ou .ssa`);
+            // Resetar input
+            fileInput.value = '';
+            selectedFile = null;
+            fileContent = null;
+            fileFormat = null;
+            fileLabel.classList.remove('has-file');
+            fileName.textContent = '';
+            fileName.classList.add('hidden');
+            fileLabel.querySelector('.text').textContent = 'Clique ou arraste um arquivo';
+            return;
+        }
+        
         selectedFile = file;
         fileLabel.classList.add('has-file');
         fileName.textContent = file.name;
@@ -647,17 +628,21 @@ async function init() {
         
         try {
             fileContent = await readFile(file);
-            const ext = file.name.split('.').pop().toLowerCase();
+            fileFormat = null; // Resetar formato
             
             if (ext === 'srt') {
                 fileContent = convertSRTtoVTT(fileContent);
+                fileFormat = 'vtt';
                 setStatus('info', '📄 SRT convertido para VTT');
             } else if (ext === 'ass' || ext === 'ssa') {
-                fileContent = convertASStoVTT(fileContent);
-                setStatus('info', '📄 ASS convertido para VTT');
-            } else if (ext === 'ytt') {
+                // NÃO converter! Enviar ASS nativo com todos os estilos
+                fileFormat = 'ass';
+                setStatus('success', '✅ Arquivo ASS pronto (estilos preservados)');
+            } else if (ext === 'ytt' || ext === 'xml') {
+                fileFormat = 'ytt';
                 setStatus('success', '✅ Arquivo YTT pronto');
             } else {
+                fileFormat = 'vtt';
                 setStatus('success', '✅ Arquivo VTT pronto');
             }
             
