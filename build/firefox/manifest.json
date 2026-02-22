@@ -1,0 +1,50 @@
+{
+  "manifest_version": 2,
+  "name": "__MSG_extensionName__",
+  "version": "1.5.4",
+  "description": "__MSG_extensionDescription__",
+  "default_locale": "en",
+  
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs",
+    "https://www.youtube.com/*",
+    "https://youtube.com/*",
+    "https://auth.kennyy.com.br/*"
+  ],
+  
+  "browser_action": {
+    "default_icon": {
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "RevoSub - Clique para abrir"
+  },
+  
+  "icons": {
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*", "https://youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "revosub@kennyy.com.br",
+      "strict_min_version": "109.0"
+    }
+  }
+}

@@ -1,0 +1,486 @@
+{
+  "extensionName": {
+    "message": "RevoSub",
+    "description": "Nome da extensão"
+  },
+  "extensionDescription": {
+    "message": "Legendas estilizadas no YouTube",
+    "description": "Descrição da extensão"
+  },
+  
+  "loginTitle": {
+    "message": "Faça login para salvar e acessar suas legendas na nuvem",
+    "description": "Título da seção de login"
+  },
+  "loginWithDiscord": {
+    "message": "Entrar com Discord",
+    "description": "Botão de login com Discord"
+  },
+  "logout": {
+    "message": "Sair",
+    "description": "Botão de logout"
+  },
+  "useWithoutLogin": {
+    "message": "Ou use sem login para injetar legendas localmente",
+    "description": "Dica de uso sem login"
+  },
+  "connected": {
+    "message": "Conectado",
+    "description": "Status de conexão do usuário"
+  },
+  
+  "tabLocal": {
+    "message": "Local",
+    "description": "Aba de legendas locais"
+  },
+  "tabCloud": {
+    "message": "Nuvem",
+    "description": "Aba de legendas na nuvem"
+  },
+  "tabAdmin": {
+    "message": "ADM",
+    "description": "Aba de administração"
+  },
+  "mySubtitles": {
+    "message": "Minhas Legendas",
+    "description": "Título da seção de legendas do usuário"
+  },
+  
+  "selectFile": {
+    "message": "Clique ou arraste um arquivo",
+    "description": "Placeholder para selecionar arquivo"
+  },
+  "fileSelected": {
+    "message": "Arquivo selecionado:",
+    "description": "Label de arquivo selecionado"
+  },
+  "formats": {
+    "message": "Formatos:",
+    "description": "Label de formatos suportados"
+  },
+  
+  "injectSubtitle": {
+    "message": "Injetar Legenda",
+    "description": "Botão para injetar legenda"
+  },
+  "removeSubtitle": {
+    "message": "Remover Legenda",
+    "description": "Botão para remover legenda"
+  },
+  "publicSubtitle": {
+    "message": "Legenda pública",
+    "description": "Checkbox de legenda pública"
+  },
+  "saveToCloud": {
+    "message": "Salvar na Nuvem",
+    "description": "Botão de salvar na nuvem"
+  },
+  
+  "videoId": {
+    "message": "Video ID:",
+    "description": "Label do ID do vídeo"
+  },
+  "activeSubtitle": {
+    "message": "Legenda Ativa:",
+    "description": "Label da legenda ativa"
+  },
+  
+  "adminUsers": {
+    "message": "Usuários",
+    "description": "Sub-aba de usuários no admin"
+  },
+  "adminSubtitles": {
+    "message": "Legendas",
+    "description": "Sub-aba de legendas no admin"
+  },
+  "adminReports": {
+    "message": "Denúncias",
+    "description": "Sub-aba de denúncias no admin"
+  },
+  
+  "searchUser": {
+    "message": "Buscar usuário...",
+    "description": "Placeholder de busca de usuário"
+  },
+  "searchSubtitle": {
+    "message": "Buscar legenda...",
+    "description": "Placeholder de busca de legenda"
+  },
+  
+  "filterPending": {
+    "message": "Pendentes",
+    "description": "Filtro: pendentes"
+  },
+  "filterAll": {
+    "message": "Todas",
+    "description": "Filtro: todas"
+  },
+  "filterResolved": {
+    "message": "Resolvidas",
+    "description": "Filtro: resolvidas"
+  },
+  "filterDismissed": {
+    "message": "Ignoradas",
+    "description": "Filtro: ignoradas"
+  },
+  
+  "ban": {
+    "message": "Banir",
+    "description": "Botão banir"
+  },
+  "unban": {
+    "message": "Desbanir",
+    "description": "Botão desbanir"
+  },
+  "delete": {
+    "message": "Excluir",
+    "description": "Botão excluir"
+  },
+  
+  "statusOpeningLogin": {
+    "message": "⏳ Abrindo login...",
+    "description": "Status: abrindo login"
+  },
+  "statusWaitingDiscord": {
+    "message": "⏳ Aguardando login no Discord...",
+    "description": "Status: aguardando Discord"
+  },
+  "statusLoginSuccess": {
+    "message": "✅ Login realizado!",
+    "description": "Status: login sucesso"
+  },
+  "statusLoginForCloud": {
+    "message": "ℹ️ Faça login para acessar a nuvem",
+    "description": "Status: login para nuvem"
+  },
+  "statusLoginTimeout": {
+    "message": "❌ Timeout no login",
+    "description": "Status: timeout login"
+  },
+  "statusDisconnected": {
+    "message": "ℹ️ Desconectado",
+    "description": "Status: desconectado"
+  },
+  "statusSelectFileAndVideo": {
+    "message": "❌ Selecione um arquivo e abra um vídeo",
+    "description": "Status: selecione arquivo e vídeo"
+  },
+  "statusLoginToSave": {
+    "message": "❌ Faça login para salvar na nuvem",
+    "description": "Status: login para salvar"
+  },
+  "statusDuplicateLanguage": {
+    "message": "❌ Já existe legenda neste idioma para este vídeo",
+    "description": "Status: idioma duplicado"
+  },
+  "statusUploading": {
+    "message": "⏳ Enviando para a nuvem...",
+    "description": "Status: enviando"
+  },
+  "statusUploadSuccess": {
+    "message": "✅ Legenda salva na nuvem!",
+    "description": "Status: upload sucesso"
+  },
+  "statusDownloading": {
+    "message": "⏳ Baixando legenda...",
+    "description": "Status: baixando"
+  },
+  "statusInjected": {
+    "message": "✅ Legenda injetada!",
+    "description": "Status: injetada"
+  },
+  "statusDeleted": {
+    "message": "✅ Legenda excluída",
+    "description": "Status: excluída"
+  },
+  "statusOpenYouTube": {
+    "message": "⚠️ Abra um vídeo do YouTube primeiro",
+    "description": "Status: abrir YouTube"
+  },
+  "statusReady": {
+    "message": "✅ Pronto para injetar legenda",
+    "description": "Status: pronto"
+  },
+  "statusSelectFile": {
+    "message": "ℹ️ Selecione um arquivo de legenda",
+    "description": "Status: selecionar arquivo"
+  },
+  "statusReloadYouTube": {
+    "message": "❌ Recarregue a página do YouTube",
+    "description": "Status: recarregar YouTube"
+  },
+  "statusInjectError": {
+    "message": "❌ Erro ao injetar",
+    "description": "Status: erro ao injetar"
+  },
+  "statusInjecting": {
+    "message": "⏳ Injetando legenda...",
+    "description": "Status: injetando"
+  },
+  "statusRemoved": {
+    "message": "ℹ️ Legenda removida",
+    "description": "Status: removida"
+  },
+  "statusSrtConverted": {
+    "message": "📄 SRT convertido para VTT",
+    "description": "Status: SRT convertido"
+  },
+  "statusAssReady": {
+    "message": "✅ Arquivo ASS pronto (estilos preservados)",
+    "description": "Status: ASS pronto"
+  },
+  "statusYttReady": {
+    "message": "✅ Arquivo YTT pronto",
+    "description": "Status: YTT pronto"
+  },
+  "statusVttReady": {
+    "message": "✅ Arquivo VTT pronto",
+    "description": "Status: VTT pronto"
+  },
+  "statusFileError": {
+    "message": "❌ Erro ao ler arquivo",
+    "description": "Status: erro ao ler arquivo"
+  },
+  "statusFormatNotSupported": {
+    "message": "❌ Formato não suportado. Use: .ytt, .vtt, .srt, .ass ou .ssa",
+    "description": "Status: formato não suportado"
+  },
+  
+  "statusUserBanned": {
+    "message": "Usuário banido",
+    "description": "Status: usuário banido"
+  },
+  "statusUserUnbanned": {
+    "message": "Usuário desbanido",
+    "description": "Status: usuário desbanido"
+  },
+  "statusSubtitleDeleted": {
+    "message": "Legenda excluída",
+    "description": "Status: legenda excluída"
+  },
+  "statusReportDismissed": {
+    "message": "Denúncia ignorada",
+    "description": "Status: denúncia ignorada"
+  },
+  "statusSubtitleRemoved": {
+    "message": "Legenda removida",
+    "description": "Status: legenda removida"
+  },
+  "statusRemovedAndBanned": {
+    "message": "Legenda removida e autor banido",
+    "description": "Status: removido e banido"
+  },
+  "statusActionDone": {
+    "message": "Ação realizada",
+    "description": "Status: ação realizada"
+  },
+  
+  "loadingSubtitles": {
+    "message": "Carregando suas legendas...",
+    "description": "Carregando legendas"
+  },
+  "loadingUsers": {
+    "message": "Carregando usuários...",
+    "description": "Carregando usuários"
+  },
+  "loadingAdminSubtitles": {
+    "message": "Carregando legendas...",
+    "description": "Carregando legendas admin"
+  },
+  "loadingReports": {
+    "message": "Carregando denúncias...",
+    "description": "Carregando denúncias"
+  },
+  
+  "emptyLoginToSee": {
+    "message": "Faça login para ver suas legendas",
+    "description": "Estado vazio: login"
+  },
+  "emptyNoSubtitles": {
+    "message": "Você ainda não tem legendas salvas",
+    "description": "Estado vazio: sem legendas"
+  },
+  "emptyErrorLoading": {
+    "message": "Erro ao carregar legendas",
+    "description": "Estado vazio: erro"
+  },
+  "emptyNoUsers": {
+    "message": "Nenhum usuário encontrado",
+    "description": "Estado vazio: sem usuários"
+  },
+  "emptyNoSubtitlesAdmin": {
+    "message": "Nenhuma legenda encontrada",
+    "description": "Estado vazio: sem legendas admin"
+  },
+  "emptyNoReportsPending": {
+    "message": "Nenhuma denúncia pendente",
+    "description": "Estado vazio: sem denúncias pendentes"
+  },
+  "emptyNoReports": {
+    "message": "Nenhuma denúncia encontrada",
+    "description": "Estado vazio: sem denúncias"
+  },
+  "emptyErrorUsers": {
+    "message": "Erro ao carregar usuários",
+    "description": "Estado vazio: erro usuários"
+  },
+  "emptyErrorSubtitles": {
+    "message": "Erro ao carregar legendas",
+    "description": "Estado vazio: erro legendas"
+  },
+  "emptyErrorReports": {
+    "message": "Erro ao carregar denúncias",
+    "description": "Estado vazio: erro denúncias"
+  },
+  
+  "publicLabel": {
+    "message": "🌐 Pública",
+    "description": "Label pública"
+  },
+  "privateLabel": {
+    "message": "🔒 Privada",
+    "description": "Label privada"
+  },
+  
+  "confirmDeleteSubtitle": {
+    "message": "Excluir esta legenda?",
+    "description": "Confirmar exclusão de legenda"
+  },
+  "confirmBanUser": {
+    "message": "Banir este usuário?",
+    "description": "Confirmar banir usuário"
+  },
+  "confirmUnbanUser": {
+    "message": "Desbanir este usuário?",
+    "description": "Confirmar desbanir usuário"
+  },
+  "confirmDismissReport": {
+    "message": "Ignorar esta denúncia?",
+    "description": "Confirmar ignorar denúncia"
+  },
+  "confirmRemoveSubtitle": {
+    "message": "Remover a legenda?",
+    "description": "Confirmar remover legenda"
+  },
+  "confirmRemoveAndBan": {
+    "message": "Remover a legenda E banir o autor?",
+    "description": "Confirmar remover e banir"
+  },
+  
+  "viewVideo": {
+    "message": "Ver Vídeo",
+    "description": "Botão ver vídeo"
+  },
+  "dismiss": {
+    "message": "Ignorar",
+    "description": "Botão ignorar"
+  },
+  "remove": {
+    "message": "Remover",
+    "description": "Botão remover"
+  },
+  "removeAndBan": {
+    "message": "Remover + Banir",
+    "description": "Botão remover e banir"
+  },
+  
+  "reasonSpam": {
+    "message": "Spam",
+    "description": "Razão: spam"
+  },
+  "reasonOffensive": {
+    "message": "Conteúdo Ofensivo",
+    "description": "Razão: ofensivo"
+  },
+  "reasonWrongSync": {
+    "message": "Sincronização Errada",
+    "description": "Razão: sincronia"
+  },
+  "reasonWrongLanguage": {
+    "message": "Idioma Incorreto",
+    "description": "Razão: idioma"
+  },
+  "reasonCopyright": {
+    "message": "Direitos Autorais",
+    "description": "Razão: copyright"
+  },
+  "reasonOther": {
+    "message": "Outro",
+    "description": "Razão: outro"
+  },
+  
+  "reportVideoLabel": {
+    "message": "Vídeo:",
+    "description": "Label vídeo"
+  },
+  "reportLanguageLabel": {
+    "message": "Idioma:",
+    "description": "Label idioma"
+  },
+  "reportSubtitleLabel": {
+    "message": "Legenda:",
+    "description": "Label legenda"
+  },
+  "reportAuthorLabel": {
+    "message": "Autor:",
+    "description": "Label autor"
+  },
+  "reportedByLabel": {
+    "message": "Denunciado por:",
+    "description": "Label denunciante"
+  },
+  "reportStatusLabel": {
+    "message": "Status:",
+    "description": "Label status"
+  },
+  
+  "errorPrefix": {
+    "message": "Erro:",
+    "description": "Prefixo de erro"
+  },
+  "error": {
+    "message": "Erro",
+    "description": "Erro genérico"
+  },
+  
+  "reportSubtitle": {
+    "message": "Denunciar legenda",
+    "description": "Opção de denunciar"
+  },
+  "reportTitle": {
+    "message": "Denunciar Legenda",
+    "description": "Título do modal de denúncia"
+  },
+  "reportReasonLabel": {
+    "message": "Motivo:",
+    "description": "Label motivo"
+  },
+  "reportDescriptionLabel": {
+    "message": "Descrição (opcional):",
+    "description": "Label descrição"
+  },
+  "reportDescriptionPlaceholder": {
+    "message": "Descreva o problema...",
+    "description": "Placeholder descrição"
+  },
+  "cancel": {
+    "message": "Cancelar",
+    "description": "Botão cancelar"
+  },
+  "send": {
+    "message": "Enviar",
+    "description": "Botão enviar"
+  },
+  "loginToReport": {
+    "message": "Faça login na extensão para denunciar legendas.",
+    "description": "Alerta login para denunciar"
+  },
+  "reportSuccess": {
+    "message": "Denúncia enviada com sucesso!",
+    "description": "Sucesso ao denunciar"
+  },
+  "reportError": {
+    "message": "Erro ao enviar denúncia",
+    "description": "Erro ao denunciar"
+  }
+}

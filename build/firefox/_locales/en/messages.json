@@ -1,0 +1,486 @@
+{
+  "extensionName": {
+    "message": "RevoSub",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "Stylized subtitles on YouTube",
+    "description": "Extension description"
+  },
+  
+  "loginTitle": {
+    "message": "Log in to save and access your subtitles in the cloud",
+    "description": "Login section title"
+  },
+  "loginWithDiscord": {
+    "message": "Login with Discord",
+    "description": "Discord login button"
+  },
+  "logout": {
+    "message": "Logout",
+    "description": "Logout button"
+  },
+  "useWithoutLogin": {
+    "message": "Or use without login to inject subtitles locally",
+    "description": "Use without login hint"
+  },
+  "connected": {
+    "message": "Connected",
+    "description": "User connection status"
+  },
+  
+  "tabLocal": {
+    "message": "Local",
+    "description": "Local subtitles tab"
+  },
+  "tabCloud": {
+    "message": "Cloud",
+    "description": "Cloud subtitles tab"
+  },
+  "tabAdmin": {
+    "message": "ADM",
+    "description": "Admin tab"
+  },
+  "mySubtitles": {
+    "message": "My Subtitles",
+    "description": "User subtitles section title"
+  },
+  
+  "selectFile": {
+    "message": "Click or drag a file",
+    "description": "File select placeholder"
+  },
+  "fileSelected": {
+    "message": "File selected:",
+    "description": "File selected label"
+  },
+  "formats": {
+    "message": "Formats:",
+    "description": "Supported formats label"
+  },
+  
+  "injectSubtitle": {
+    "message": "Inject Subtitle",
+    "description": "Inject subtitle button"
+  },
+  "removeSubtitle": {
+    "message": "Remove Subtitle",
+    "description": "Remove subtitle button"
+  },
+  "publicSubtitle": {
+    "message": "Public subtitle",
+    "description": "Public subtitle checkbox"
+  },
+  "saveToCloud": {
+    "message": "Save to Cloud",
+    "description": "Save to cloud button"
+  },
+  
+  "videoId": {
+    "message": "Video ID:",
+    "description": "Video ID label"
+  },
+  "activeSubtitle": {
+    "message": "Active Subtitle:",
+    "description": "Active subtitle label"
+  },
+  
+  "adminUsers": {
+    "message": "Users",
+    "description": "Admin users sub-tab"
+  },
+  "adminSubtitles": {
+    "message": "Subtitles",
+    "description": "Admin subtitles sub-tab"
+  },
+  "adminReports": {
+    "message": "Reports",
+    "description": "Admin reports sub-tab"
+  },
+  
+  "searchUser": {
+    "message": "Search user...",
+    "description": "User search placeholder"
+  },
+  "searchSubtitle": {
+    "message": "Search subtitle...",
+    "description": "Subtitle search placeholder"
+  },
+  
+  "filterPending": {
+    "message": "Pending",
+    "description": "Filter: pending"
+  },
+  "filterAll": {
+    "message": "All",
+    "description": "Filter: all"
+  },
+  "filterResolved": {
+    "message": "Resolved",
+    "description": "Filter: resolved"
+  },
+  "filterDismissed": {
+    "message": "Dismissed",
+    "description": "Filter: dismissed"
+  },
+  
+  "ban": {
+    "message": "Ban",
+    "description": "Ban button"
+  },
+  "unban": {
+    "message": "Unban",
+    "description": "Unban button"
+  },
+  "delete": {
+    "message": "Delete",
+    "description": "Delete button"
+  },
+  
+  "statusOpeningLogin": {
+    "message": "⏳ Opening login...",
+    "description": "Status: opening login"
+  },
+  "statusWaitingDiscord": {
+    "message": "⏳ Waiting for Discord login...",
+    "description": "Status: waiting Discord"
+  },
+  "statusLoginSuccess": {
+    "message": "✅ Login successful!",
+    "description": "Status: login success"
+  },
+  "statusLoginForCloud": {
+    "message": "ℹ️ Log in to access the cloud",
+    "description": "Status: login for cloud"
+  },
+  "statusLoginTimeout": {
+    "message": "❌ Login timeout",
+    "description": "Status: login timeout"
+  },
+  "statusDisconnected": {
+    "message": "ℹ️ Disconnected",
+    "description": "Status: disconnected"
+  },
+  "statusSelectFileAndVideo": {
+    "message": "❌ Select a file and open a video",
+    "description": "Status: select file and video"
+  },
+  "statusLoginToSave": {
+    "message": "❌ Log in to save to cloud",
+    "description": "Status: login to save"
+  },
+  "statusDuplicateLanguage": {
+    "message": "❌ A subtitle in this language already exists for this video",
+    "description": "Status: duplicate language"
+  },
+  "statusUploading": {
+    "message": "⏳ Uploading to cloud...",
+    "description": "Status: uploading"
+  },
+  "statusUploadSuccess": {
+    "message": "✅ Subtitle saved to cloud!",
+    "description": "Status: upload success"
+  },
+  "statusDownloading": {
+    "message": "⏳ Downloading subtitle...",
+    "description": "Status: downloading"
+  },
+  "statusInjected": {
+    "message": "✅ Subtitle injected!",
+    "description": "Status: injected"
+  },
+  "statusDeleted": {
+    "message": "✅ Subtitle deleted",
+    "description": "Status: deleted"
+  },
+  "statusOpenYouTube": {
+    "message": "⚠️ Open a YouTube video first",
+    "description": "Status: open YouTube"
+  },
+  "statusReady": {
+    "message": "✅ Ready to inject subtitle",
+    "description": "Status: ready"
+  },
+  "statusSelectFile": {
+    "message": "ℹ️ Select a subtitle file",
+    "description": "Status: select file"
+  },
+  "statusReloadYouTube": {
+    "message": "❌ Reload the YouTube page",
+    "description": "Status: reload YouTube"
+  },
+  "statusInjectError": {
+    "message": "❌ Error injecting",
+    "description": "Status: inject error"
+  },
+  "statusInjecting": {
+    "message": "⏳ Injecting subtitle...",
+    "description": "Status: injecting"
+  },
+  "statusRemoved": {
+    "message": "ℹ️ Subtitle removed",
+    "description": "Status: removed"
+  },
+  "statusSrtConverted": {
+    "message": "📄 SRT converted to VTT",
+    "description": "Status: SRT converted"
+  },
+  "statusAssReady": {
+    "message": "✅ ASS file ready (styles preserved)",
+    "description": "Status: ASS ready"
+  },
+  "statusYttReady": {
+    "message": "✅ YTT file ready",
+    "description": "Status: YTT ready"
+  },
+  "statusVttReady": {
+    "message": "✅ VTT file ready",
+    "description": "Status: VTT ready"
+  },
+  "statusFileError": {
+    "message": "❌ Error reading file",
+    "description": "Status: file read error"
+  },
+  "statusFormatNotSupported": {
+    "message": "❌ Format not supported. Use: .ytt, .vtt, .srt, .ass or .ssa",
+    "description": "Status: format not supported"
+  },
+  
+  "statusUserBanned": {
+    "message": "User banned",
+    "description": "Status: user banned"
+  },
+  "statusUserUnbanned": {
+    "message": "User unbanned",
+    "description": "Status: user unbanned"
+  },
+  "statusSubtitleDeleted": {
+    "message": "Subtitle deleted",
+    "description": "Status: subtitle deleted"
+  },
+  "statusReportDismissed": {
+    "message": "Report dismissed",
+    "description": "Status: report dismissed"
+  },
+  "statusSubtitleRemoved": {
+    "message": "Subtitle removed",
+    "description": "Status: subtitle removed"
+  },
+  "statusRemovedAndBanned": {
+    "message": "Subtitle removed and author banned",
+    "description": "Status: removed and banned"
+  },
+  "statusActionDone": {
+    "message": "Action completed",
+    "description": "Status: action done"
+  },
+  
+  "loadingSubtitles": {
+    "message": "Loading your subtitles...",
+    "description": "Loading subtitles"
+  },
+  "loadingUsers": {
+    "message": "Loading users...",
+    "description": "Loading users"
+  },
+  "loadingAdminSubtitles": {
+    "message": "Loading subtitles...",
+    "description": "Loading admin subtitles"
+  },
+  "loadingReports": {
+    "message": "Loading reports...",
+    "description": "Loading reports"
+  },
+  
+  "emptyLoginToSee": {
+    "message": "Log in to see your subtitles",
+    "description": "Empty state: login"
+  },
+  "emptyNoSubtitles": {
+    "message": "You don't have any saved subtitles yet",
+    "description": "Empty state: no subtitles"
+  },
+  "emptyErrorLoading": {
+    "message": "Error loading subtitles",
+    "description": "Empty state: error"
+  },
+  "emptyNoUsers": {
+    "message": "No users found",
+    "description": "Empty state: no users"
+  },
+  "emptyNoSubtitlesAdmin": {
+    "message": "No subtitles found",
+    "description": "Empty state: no subtitles admin"
+  },
+  "emptyNoReportsPending": {
+    "message": "No pending reports",
+    "description": "Empty state: no pending reports"
+  },
+  "emptyNoReports": {
+    "message": "No reports found",
+    "description": "Empty state: no reports"
+  },
+  "emptyErrorUsers": {
+    "message": "Error loading users",
+    "description": "Empty state: error users"
+  },
+  "emptyErrorSubtitles": {
+    "message": "Error loading subtitles",
+    "description": "Empty state: error subtitles"
+  },
+  "emptyErrorReports": {
+    "message": "Error loading reports",
+    "description": "Empty state: error reports"
+  },
+  
+  "publicLabel": {
+    "message": "🌐 Public",
+    "description": "Public label"
+  },
+  "privateLabel": {
+    "message": "🔒 Private",
+    "description": "Private label"
+  },
+  
+  "confirmDeleteSubtitle": {
+    "message": "Delete this subtitle?",
+    "description": "Confirm delete subtitle"
+  },
+  "confirmBanUser": {
+    "message": "Ban this user?",
+    "description": "Confirm ban user"
+  },
+  "confirmUnbanUser": {
+    "message": "Unban this user?",
+    "description": "Confirm unban user"
+  },
+  "confirmDismissReport": {
+    "message": "Dismiss this report?",
+    "description": "Confirm dismiss report"
+  },
+  "confirmRemoveSubtitle": {
+    "message": "Remove the subtitle?",
+    "description": "Confirm remove subtitle"
+  },
+  "confirmRemoveAndBan": {
+    "message": "Remove the subtitle AND ban the author?",
+    "description": "Confirm remove and ban"
+  },
+  
+  "viewVideo": {
+    "message": "View Video",
+    "description": "View video button"
+  },
+  "dismiss": {
+    "message": "Dismiss",
+    "description": "Dismiss button"
+  },
+  "remove": {
+    "message": "Remove",
+    "description": "Remove button"
+  },
+  "removeAndBan": {
+    "message": "Remove + Ban",
+    "description": "Remove and ban button"
+  },
+  
+  "reasonSpam": {
+    "message": "Spam",
+    "description": "Reason: spam"
+  },
+  "reasonOffensive": {
+    "message": "Offensive Content",
+    "description": "Reason: offensive"
+  },
+  "reasonWrongSync": {
+    "message": "Wrong Synchronization",
+    "description": "Reason: sync"
+  },
+  "reasonWrongLanguage": {
+    "message": "Wrong Language",
+    "description": "Reason: language"
+  },
+  "reasonCopyright": {
+    "message": "Copyright Violation",
+    "description": "Reason: copyright"
+  },
+  "reasonOther": {
+    "message": "Other",
+    "description": "Reason: other"
+  },
+  
+  "reportVideoLabel": {
+    "message": "Video:",
+    "description": "Video label"
+  },
+  "reportLanguageLabel": {
+    "message": "Language:",
+    "description": "Language label"
+  },
+  "reportSubtitleLabel": {
+    "message": "Subtitle:",
+    "description": "Subtitle label"
+  },
+  "reportAuthorLabel": {
+    "message": "Author:",
+    "description": "Author label"
+  },
+  "reportedByLabel": {
+    "message": "Reported by:",
+    "description": "Reporter label"
+  },
+  "reportStatusLabel": {
+    "message": "Status:",
+    "description": "Status label"
+  },
+  
+  "errorPrefix": {
+    "message": "Error:",
+    "description": "Error prefix"
+  },
+  "error": {
+    "message": "Error",
+    "description": "Generic error"
+  },
+  
+  "reportSubtitle": {
+    "message": "Report subtitle",
+    "description": "Report option"
+  },
+  "reportTitle": {
+    "message": "Report Subtitle",
+    "description": "Report modal title"
+  },
+  "reportReasonLabel": {
+    "message": "Reason:",
+    "description": "Reason label"
+  },
+  "reportDescriptionLabel": {
+    "message": "Description (optional):",
+    "description": "Description label"
+  },
+  "reportDescriptionPlaceholder": {
+    "message": "Describe the problem...",
+    "description": "Description placeholder"
+  },
+  "cancel": {
+    "message": "Cancel",
+    "description": "Cancel button"
+  },
+  "send": {
+    "message": "Send",
+    "description": "Send button"
+  },
+  "loginToReport": {
+    "message": "Log in to the extension to report subtitles.",
+    "description": "Login to report alert"
+  },
+  "reportSuccess": {
+    "message": "Report sent successfully!",
+    "description": "Report success"
+  },
+  "reportError": {
+    "message": "Error sending report",
+    "description": "Report error"
+  }
+}

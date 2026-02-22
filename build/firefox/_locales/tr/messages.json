@@ -1,0 +1,486 @@
+{
+  "extensionName": {
+    "message": "RevoSub",
+    "description": "Eklentinin adı"
+  },
+  "extensionDescription": {
+    "message": "YouTube'da şekilli alt yazılar!",
+    "description": "Eklentinin açıklaması"
+  },
+  
+  "loginTitle": {
+    "message": "Alt yazı yüklemek ve buluttaki alt yazılarına erişmek için giriş yap",
+    "description": "Giriş yapma bölümü başlığı"
+  },
+  "loginWithDiscord": {
+    "message": "Discord ile giriş yap",
+    "description": "Discord girişi düğmesi"
+  },
+  "logout": {
+    "message": "Çıkış yap",
+    "description": "Çıkış yap düğmesi"
+  },
+  "useWithoutLogin": {
+    "message": "Ya da giriş yapmadan sadece alt yazıları yükle.",
+    "description": "Giriş zorunluluğu olmadan yükle"
+  },
+  "connected": {
+    "message": "Bağlandı!",
+    "description": "Kullanıcı bağlantı durumu"
+  },
+  
+  "tabLocal": {
+    "message": "Yerel",
+    "description": "Yereldeki alt yazılar paneli"
+  },
+  "tabCloud": {
+    "message": "Bulut",
+    "description": "Buluttaki alt yazılar paneli"
+  },
+  "tabAdmin": {
+    "message": "Yönetici",
+    "description": "Yönetici Paneli"
+  },
+  "mySubtitles": {
+    "message": "Alt Yazılarım",
+    "description": "Kullanıcı alt yazıları bölümü"
+  },
+  
+  "selectFile": {
+    "message": "Bir alt yazı sürükle ya da seç:",
+    "description": "File select placeholder"
+  },
+  "fileSelected": {
+    "message": "Seçilen dosya:",
+    "description": "Seçilen dosya bölümü"
+  },
+  "formats": {
+    "message": "Desteklenen alt yazı uzantıları:",
+    "description": "Desteklenen alt yazı bölümü"
+  },
+  
+  "injectSubtitle": {
+    "message": "Alt Yazıları Yükle",
+    "description": "Alt yazıları yükle düğmesi"
+  },
+  "removeSubtitle": {
+    "message": "Alt Yazıları Kaldır",
+    "description": "Alt yazıları kaldır düğmesi"
+  },
+  "publicSubtitle": {
+    "message": "Alt Yazıları Yayınla",
+    "description": "Alt yazıları yayınlama tiki"
+  },
+  "saveToCloud": {
+    "message": "Buluta Kaydet",
+    "description": "Buluta kaydet düğmesi"
+  },
+  
+  "videoId": {
+    "message": "Video ID:",
+    "description": "Video ID bölümü"
+  },
+  "activeSubtitle": {
+    "message": "Aktif Alt Yazılar:",
+    "description": "Aktif alt yazılar bölümü"
+  },
+  
+  "adminUsers": {
+    "message": "Kullanıcılar",
+    "description": "Yönetici kullanıcı alt sekmesi"
+  },
+  "adminSubtitles": {
+    "message": "Alt Yazılar",
+    "description": "Yöneticii alt yazılar alt sekmesi"
+  },
+  "adminReports": {
+    "message": "Raporlar",
+    "description": "Yönetici raporlar sekmesi"
+  },
+  
+  "searchUser": {
+    "message": "Kullanıcı ara...",
+    "description": "User search placeholder"
+  },
+  "searchSubtitle": {
+    "message": "Alt yazıları ara...",
+    "description": "Alt yazı arama bölümü"
+  },
+  
+  "filterPending": {
+    "message": "Cevap bekleniyor",
+    "description": "Filtre: Askıda"
+  },
+  "filterAll": {
+    "message": "Hepsi",
+    "description": "Filtre: Hepsi"
+  },
+  "filterResolved": {
+    "message": "Çözüldü",
+    "description": "Filtre: Çözüldü"
+  },
+  "filterDismissed": {
+    "message": "Reddedildi",
+    "description": "Filtre: Reddedildi"
+  },
+  
+  "ban": {
+    "message": "Yasakla",
+    "description": "Yasaklama düğmesi"
+  },
+  "unban": {
+    "message": "Yasaklamayı kaldır",
+    "description": "Yasaklamayı kaldırma düğmesi"
+  },
+  "delete": {
+    "message": "Kaldır",
+    "description": "Kaldırma düğmesi"
+  },
+  
+  "statusOpeningLogin": {
+    "message": "⏳ Giriş yapılıyor...",
+    "description": "Durum: giriş yapılıyor"
+  },
+  "statusWaitingDiscord": {
+    "message": "⏳ Discord girişi bekleniyor...",
+    "description": "Durum: Discord girişi bekleniyor"
+  },
+  "statusLoginSuccess": {
+    "message": "✅ Giriş yapıldı!",
+    "description": "Durum: giriş başarılı"
+  },
+  "statusLoginForCloud": {
+    "message": "ℹ️ Buluta erişmek için giriş yap",
+    "description": "Durum: bulut için giriş"
+  },
+  "statusLoginTimeout": {
+    "message": "❌ Giriş zaman aşımına uğradı",
+    "description": "Durum: giriş zaman aşımı"
+  },
+  "statusDisconnected": {
+    "message": "ℹ️ Bağlantı kesildi",
+    "description": "Durum: bağlantı kesildi"
+  },
+  "statusSelectFileAndVideo": {
+    "message": "❌ Bir alt yazı seç ve video aç",
+    "description": "Durum: dosya seç ve video aç"
+  },
+  "statusLoginToSave": {
+    "message": "❌ Buluta kaydetmek için giriş yap",
+    "description": "Durum: buluta kaydetmek için giriş"
+  },
+  "statusDuplicateLanguage": {
+    "message": "❌ Bu dilde hâlihazırda bir alt yazı bulunuyor!",
+    "description": "Durum: çifte dil"
+  },
+  "statusUploading": {
+    "message": "⏳ Buluta yükleniyor...",
+    "description": "Durum: yükleniyor"
+  },
+  "statusUploadSuccess": {
+    "message": "✅ Alt yazı buluta kaydedildi!",
+    "description": "Durum: yayınlama başarılı"
+  },
+  "statusDownloading": {
+    "message": "⏳ Alt yazı indiriliyor...",
+    "description": "Durum: indiriliyor"
+  },
+  "statusInjected": {
+    "message": "✅ Alt yazılar yüklendi!",
+    "description": "Durum: yüklendi"
+  },
+  "statusDeleted": {
+    "message": "✅ Alt yazılar silindi!",
+    "description": "Durum: silindi"
+  },
+  "statusOpenYouTube": {
+    "message": "⚠️ İlk öncelikle bir YouTube videosu açın.",
+    "description": "Durum: YouTube'u aç"
+  },
+  "statusReady": {
+    "message": "✅ Alt yazı yüklemeye müsait",
+    "description": "Durum: müsait"
+  },
+  "statusSelectFile": {
+    "message": "ℹ️ Bir alt yazı dosyası seç",
+    "description": "Durum: alt yazı seç"
+  },
+  "statusReloadYouTube": {
+    "message": "❌ YouTube sayfasını yenile!",
+    "description": "Durum: YouTube'u yenile"
+  },
+  "statusInjectError": {
+    "message": "❌ Yüklenmede sorun oluştu",
+    "description": "Durum: yükleme hatası"
+  },
+  "statusInjecting": {
+    "message": "⏳ Alt yazı yükleniyor...",
+    "description": "Durum: yükleniyor"
+  },
+  "statusRemoved": {
+    "message": "ℹ️ Alt yazı kaldırıldı",
+    "description": "Durum: kaldırıldı"
+  },
+  "statusSrtConverted": {
+    "message": "📄 SRT dosyası VTT'ye dönüştürüldü",
+    "description": "Durum: SRT dönüştürüldü"
+  },
+  "statusAssReady": {
+    "message": "✅ ASS dosyası hazır (Stiller korunur)",
+    "description": "Durum: ASS hazır"
+  },
+  "statusYttReady": {
+    "message": "✅ YTT dosyası hazır",
+    "description": "Durum: YTT hazır"
+  },
+  "statusVttReady": {
+    "message": "✅ VTT dosyası hazır",
+    "description": "Durum: VTT hazır"
+  },
+  "statusFileError": {
+    "message": "❌ Dosya okunamadı",
+    "description": "Durum: dosya okunamadı hatası"
+  },
+  "statusFormatNotSupported": {
+    "message": "❌ Uzantı desteklenmiyor. Lütfen \".ytt, .vtt, .srt, .ass ya da .ssa\" uzantılarını yükleyin.",
+    "description": "Durum: uzantı desteklenmiyor"
+  },
+  
+  "statusUserBanned": {
+    "message": "Kullanıcı yasaklandı",
+    "description": "Durum: yasaklandı"
+  },
+  "statusUserUnbanned": {
+    "message": "Kullanıcının yasaklanması kaldırıldı",
+    "description": "Durum: yasak kalktı"
+  },
+  "statusSubtitleDeleted": {
+    "message": "Alt yazılar silindi",
+    "description": "Durum: alt yazılar silindi"
+  },
+  "statusReportDismissed": {
+    "message": "Rapor reddedildi",
+    "description": "Durum: reddedilen rapor"
+  },
+  "statusSubtitleRemoved": {
+    "message": "Alt yazılar kaldırıldı",
+    "description": "Durum: alt yazı kaldırıldı"
+  },
+  "statusRemovedAndBanned": {
+    "message": "Alt yazı kaldırıldı ve yapımcısı yasaklandı",
+    "description": "Durum: kaldırıldı ve yasaklandı"
+  },
+  "statusActionDone": {
+    "message": "Eylem tamamlandı",
+    "description": "Durum: eylem tamam"
+  },
+  
+  "loadingSubtitles": {
+    "message": "Alt yazılar yükleniyor...",
+    "description": "Alt yazılar yükleniyor"
+  },
+  "loadingUsers": {
+    "message": "Kullanıcılar yükleniyor...",
+    "description": "Kullanıcılar yükleniyor"
+  },
+  "loadingAdminSubtitles": {
+    "message": "Alt yazılar yükleniyor...",
+    "description": "Yönetici alt yazıları yükleniyor"
+  },
+  "loadingReports": {
+    "message": "Raporlar yükleniyor...",
+    "description": "Raporlar yükleniyor"
+  },
+  
+  "emptyLoginToSee": {
+    "message": "Alt yazılarını görmek için giriş yap",
+    "description": "Boş alan: giriş"
+  },
+  "emptyNoSubtitles": {
+    "message": "Herhangi bir alt yazı kaydetmedin.",
+    "description": "Boş alan: alt yazı yok"
+  },
+  "emptyErrorLoading": {
+    "message": "Alt yazı yüklenirken bir hata oluştu.",
+    "description": "Boş alan: hata"
+  },
+  "emptyNoUsers": {
+    "message": "Herhangi bir kullanıcı bulunamadı.",
+    "description": "Boş alan: kullanıcı bulunamadı"
+  },
+  "emptyNoSubtitlesAdmin": {
+    "message": "Herhangi bir alt yazı bulunamadı.",
+    "description": "Boş alan: yönetici alt yazı yok"
+  },
+  "emptyNoReportsPending": {
+    "message": "Bekleyen rapor bulunamadı.",
+    "description": "Boş alan: bekleyen rapor yok"
+  },
+  "emptyNoReports": {
+    "message": "Herhangi bir rapor yok.",
+    "description": "Boş alan: rapor yok"
+  },
+  "emptyErrorUsers": {
+    "message": "Kullanıcılar yüklenirken bir hata oluştu.",
+    "description": "Boş alan: kullanıcı hata"
+  },
+  "emptyErrorSubtitles": {
+    "message": "Alt yazılar yüklenirken bir hata oluştu.",
+    "description": "Boş alan: alt yazı hata"
+  },
+  "emptyErrorReports": {
+    "message": "Raporlar yüklenirken bir hata oluştu.",
+    "description": "Boş alan: rapor hata"
+  },
+  
+  "publicLabel": {
+    "message": "🌐 Herkese Açık",
+    "description": "Herkese açık bölümü"
+  },
+  "privateLabel": {
+    "message": "🔒 Gizli",
+    "description": "Gizli bölümü"
+  },
+  
+  "confirmDeleteSubtitle": {
+    "message": "Alt yazılarsilinsin mi?",
+    "description": "Alt yazı silme onayı"
+  },
+  "confirmBanUser": {
+    "message": "Kullanıcı yasaklansın mı?",
+    "description": "Yasaklanma onayı"
+  },
+  "confirmUnbanUser": {
+    "message": "Kullanıcının yasaklanması kaldırılsın mı?",
+    "description": "Yasak kaldırma onayı"
+  },
+  "confirmDismissReport": {
+    "message": "Raporu reddetmek istediğine emin misin?",
+    "description": "Rapor reddetme onayı"
+  },
+  "confirmRemoveSubtitle": {
+    "message": "Alt yazılar kaldırılsın mı?",
+    "description": "Alt yazıları kaldırma onayı"
+  },
+  "confirmRemoveAndBan": {
+    "message": "Alt yazıyı kaldırmak ve yapımcısını yasaklamak istiyor musun?",
+    "description": "Alt yazı kaldırma ve yasaklama onayı"
+  },
+  
+  "viewVideo": {
+    "message": "Videoyu Görüntüle",
+    "description": "Videoyu görüntüle düğmesi"
+  },
+  "dismiss": {
+    "message": "Reddet",
+    "description": "Reddet düğmesi"
+  },
+  "remove": {
+    "message": "Kaldır",
+    "description": "Kaldır düğmesi"
+  },
+  "removeAndBan": {
+    "message": "Kaldır ve Yasakla",
+    "description": "Kaldırma ve yasaklama düğmesi"
+  },
+  
+  "reasonSpam": {
+    "message": "Spam",
+    "description": "Sebep: spam"
+  },
+  "reasonOffensive": {
+    "message": "Saldırgan İçerik",
+    "description": "Sebep: saldırı"
+  },
+  "reasonWrongSync": {
+    "message": "Yanlış Senkronizasyon",
+    "description": "Sebep: eşzamanlama"
+  },
+  "reasonWrongLanguage": {
+    "message": "Yanlış Dil:",
+    "description": "Sebep: dil"
+  },
+  "reasonCopyright": {
+    "message": "Telif Hakkı İhlali",
+    "description": "Sebep: telif"
+  },
+  "reasonOther": {
+    "message": "Diğer",
+    "description": "Sebep: diğer"
+  },
+  
+  "reportVideoLabel": {
+    "message": "Video:",
+    "description": "Video bölümü"
+  },
+  "reportLanguageLabel": {
+    "message": "Dil:",
+    "description": "Dil bölümü"
+  },
+  "reportSubtitleLabel": {
+    "message": "Alt Yazı:",
+    "description": "Alt Yazı bölümü"
+  },
+  "reportAuthorLabel": {
+    "message": "Yapımcı:",
+    "description": "Yapımcı bölümü"
+  },
+  "reportedByLabel": {
+    "message": "Bildiren kişi:",
+    "description": "Bildirilen bölümü"
+  },
+  "reportStatusLabel": {
+    "message": "Durum:",
+    "description": "Durum bölümü"
+  },
+  
+  "errorPrefix": {
+    "message": "Hata:",
+    "description": "Hata ön eki"
+  },
+  "error": {
+    "message": "Hata",
+    "description": "Genel hata"
+  },
+  
+  "reportSubtitle": {
+    "message": "Alt yazıyı bildir",
+    "description": "Bildirme seçeneği"
+  },
+  "reportTitle": {
+    "message": "Alt yazıyı bildir",
+    "description": "Bildirme ekranı başlığı"
+  },
+  "reportReasonLabel": {
+    "message": "Sebep:",
+    "description": "Sebep bölümü"
+  },
+  "reportDescriptionLabel": {
+    "message": "Açıklama (isteğe bağlı):",
+    "description": "Açıklama bölümü"
+  },
+  "reportDescriptionPlaceholder": {
+    "message": "Bildirmek istediğiniz sebep...",
+    "description": "Açıklama yazısı"
+  },
+  "cancel": {
+    "message": "İptal",
+    "description": "İptal düğmesi"
+  },
+  "send": {
+    "message": "Gönder",
+    "description": "Gönderme düğmesi"
+  },
+  "loginToReport": {
+    "message": "Alt yazıları bildirmek için lütfen giriş yapın.",
+    "description": "Rapor kullanıcı giriş hatası"
+  },
+  "reportSuccess": {
+    "message": "Bildiri raporunuz başarıyla gönderildi!",
+    "description": "Rapor başarılı"
+  },
+  "reportError": {
+    "message": "Bildiri raporu gönderilirken hata oluştu",
+    "description": "Rapor hata"
+  }
+}

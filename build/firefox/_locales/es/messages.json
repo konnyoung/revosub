@@ -1,0 +1,466 @@
+{
+  "activeSubtitle": {
+    "description": "Etiqueta de subtítulo activo",
+    "message": "Subtítulo activo:"
+  },
+  "adminReports": {
+    "description": "Subpestaña de reportes administrativos",
+    "message": "Reportes"
+  },
+  "adminSubtitles": {
+    "description": "Subpestaña de subtítulos administrativos",
+    "message": "Subtítulos"
+  },
+  "adminUsers": {
+    "description": "Subpestaña de usuarios administrativos",
+    "message": "Usuarios"
+  },
+  "ban": {
+    "description": "Botón de banear",
+    "message": "Banear"
+  },
+  "cancel": {
+    "description": "Botón de cancelar",
+    "message": "Cancelar"
+  },
+  "confirmBanUser": {
+    "description": "Confirmar banear usuario",
+    "message": "¿Banear a este usuario?"
+  },
+  "confirmDeleteSubtitle": {
+    "description": "Confirmar eliminar subtítulo",
+    "message": "¿Eliminar este subtítulo?"
+  },
+  "confirmDismissReport": {
+    "description": "Confirmar descartar reporte",
+    "message": "¿Descartar este reporte?"
+  },
+  "confirmRemoveAndBan": {
+    "description": "Confirmar eliminar y banear",
+    "message": "¿Eliminar el subtítulo Y banear al autor?"
+  },
+  "confirmRemoveSubtitle": {
+    "description": "Confirmar eliminar subtítulo",
+    "message": "¿Eliminar el subtítulo?"
+  },
+  "confirmUnbanUser": {
+    "description": "Confirmar desbanear usuario",
+    "message": "¿Desbanear a este usuario?"
+  },
+  "connected": {
+    "description": "Estado de conexión del usuario",
+    "message": "Conectado"
+  },
+  "delete": {
+    "description": "Botón de eliminar",
+    "message": "Eliminar"
+  },
+  "dismiss": {
+    "description": "Botón de descartar",
+    "message": "Descartar"
+  },
+  "emptyErrorLoading": {
+    "description": "Estado vacío: error",
+    "message": "Error al cargar los subtítulos"
+  },
+  "emptyErrorReports": {
+    "description": "Estado vacío: error de reportes",
+    "message": "Error al cargar reportes"
+  },
+  "emptyErrorSubtitles": {
+    "description": "Estado vacío: error de subtítulos",
+    "message": "Error al cargar subtítulos"
+  },
+  "emptyErrorUsers": {
+    "description": "Estado vacío: error de usuarios",
+    "message": "Error al cargar usuarios"
+  },
+  "emptyLoginToSee": {
+    "description": "Estado vacío: inicio de sesión",
+    "message": "Inicia sesión para ver tus subtítulos"
+  },
+  "emptyNoReports": {
+    "description": "Estado vacío: sin reportes",
+    "message": "No se encontraron reportes"
+  },
+  "emptyNoReportsPending": {
+    "description": "Estado vacío: sin reportes pendientes",
+    "message": "No hay reportes pendientes"
+  },
+  "emptyNoSubtitles": {
+    "description": "Estado vacío: sin subtítulos",
+    "message": "Aún no tienes subtítulos guardados"
+  },
+  "emptyNoSubtitlesAdmin": {
+    "description": "Estado vacío: sin subtítulos administrativos",
+    "message": "No se encontraron subtítulos"
+  },
+  "emptyNoUsers": {
+    "description": "Estado vacío: sin usuarios",
+    "message": "No se encontraron usuarios"
+  },
+  "error": {
+    "description": "Error genérico",
+    "message": "Error"
+  },
+  "errorPrefix": {
+    "description": "Prefijo de error",
+    "message": "Error:"
+  },
+  "extensionDescription": {
+    "description": "Descripción de la extensión",
+    "message": "Subtítulos estilizados en YouTube"
+  },
+  "extensionName": {
+    "description": "Nombre de la extensión",
+    "message": "RevoSub"
+  },
+  "fileSelected": {
+    "description": "Etiqueta de archivo seleccionado",
+    "message": "Archivo seleccionado:"
+  },
+  "filterAll": {
+    "description": "Filtro: todos",
+    "message": "Todos"
+  },
+  "filterDismissed": {
+    "description": "Filtro: descartados",
+    "message": "Descartados"
+  },
+  "filterPending": {
+    "description": "Filtro: pendientes",
+    "message": "Pendientes"
+  },
+  "filterResolved": {
+    "description": "Filtro: resueltos",
+    "message": "Resueltos"
+  },
+  "formats": {
+    "description": "Etiqueta de formatos compatibles",
+    "message": "Formatos:"
+  },
+  "injectSubtitle": {
+    "description": "Botón de inyectar subtítulo",
+    "message": "Inyectar subtítulo"
+  },
+  "loadingAdminSubtitles": {
+    "description": "Cargando subtítulos administrativos",
+    "message": "Cargando subtítulos..."
+  },
+  "loadingReports": {
+    "description": "Cargando reportes",
+    "message": "Cargando reportes..."
+  },
+  "loadingSubtitles": {
+    "description": "Cargando subtítulos",
+    "message": "Cargando tus subtítulos..."
+  },
+  "loadingUsers": {
+    "description": "Cargando usuarios",
+    "message": "Cargando usuarios..."
+  },
+  "loginTitle": {
+    "description": "Título de la sección de inicio de sesión",
+    "message": "Inicia sesión para guardar y acceder a tus subtítulos en la nube"
+  },
+  "loginToReport": {
+    "description": "Alerta de inicio de sesión para reportar",
+    "message": "Inicia sesión en la extensión para reportar subtítulos."
+  },
+  "loginWithDiscord": {
+    "description": "Botón de inicio de sesión con Discord",
+    "message": "Iniciar sesión con Discord"
+  },
+  "logout": {
+    "description": "Botón de cerrar sesión",
+    "message": "Cerrar sesión"
+  },
+  "mySubtitles": {
+    "description": "Título de la sección de subtítulos del usuario",
+    "message": "Mis Subtítulos"
+  },
+  "privateLabel": {
+    "description": "Etiqueta privada",
+    "message": "🔒 Privado"
+  },
+  "publicLabel": {
+    "description": "Etiqueta pública",
+    "message": "🌐 Público"
+  },
+  "publicSubtitle": {
+    "description": "Casilla de subtítulo público",
+    "message": "Subtítulo público"
+  },
+  "reasonCopyright": {
+    "description": "Razón: derechos de autor",
+    "message": "Violación de derechos de autor"
+  },
+  "reasonOffensive": {
+    "description": "Razón: ofensivo",
+    "message": "Contenido ofensivo"
+  },
+  "reasonOther": {
+    "description": "Razón: otro",
+    "message": "Otro"
+  },
+  "reasonSpam": {
+    "description": "Razón: spam",
+    "message": "Spam"
+  },
+  "reasonWrongLanguage": {
+    "description": "Razón: idioma",
+    "message": "Idioma incorrecto"
+  },
+  "reasonWrongSync": {
+    "description": "Razón: sincronización",
+    "message": "Sincronización incorrecta"
+  },
+  "remove": {
+    "description": "Botón de eliminar",
+    "message": "Eliminar"
+  },
+  "removeAndBan": {
+    "description": "Botón de eliminar y banear",
+    "message": "Eliminar + Banear"
+  },
+  "removeSubtitle": {
+    "description": "Botón de eliminar subtítulo",
+    "message": "Eliminar subtítulo"
+  },
+  "reportAuthorLabel": {
+    "description": "Etiqueta de autor",
+    "message": "Autor:"
+  },
+  "reportDescriptionLabel": {
+    "description": "Etiqueta de descripción",
+    "message": "Descripción (opcional):"
+  },
+  "reportDescriptionPlaceholder": {
+    "description": "Marcador de posición de descripción",
+    "message": "Describe el problema..."
+  },
+  "reportError": {
+    "description": "Error de reporte",
+    "message": "Error al enviar el reporte"
+  },
+  "reportLanguageLabel": {
+    "description": "Etiqueta de idioma",
+    "message": "Idioma:"
+  },
+  "reportReasonLabel": {
+    "description": "Etiqueta de razón",
+    "message": "Razón:"
+  },
+  "reportStatusLabel": {
+    "description": "Etiqueta de estado",
+    "message": "Estado:"
+  },
+  "reportSubtitle": {
+    "description": "Opción de reportar",
+    "message": "Reportar subtítulo"
+  },
+  "reportSubtitleLabel": {
+    "description": "Etiqueta de subtítulo",
+    "message": "Subtítulo:"
+  },
+  "reportSuccess": {
+    "description": "Reporte exitoso",
+    "message": "¡Reporte enviado exitosamente!"
+  },
+  "reportTitle": {
+    "description": "Título del modal de reporte",
+    "message": "Reportar subtítulo"
+  },
+  "reportVideoLabel": {
+    "description": "Etiqueta de video",
+    "message": "Video:"
+  },
+  "reportedByLabel": {
+    "description": "Etiqueta de reportador",
+    "message": "Reportado por:"
+  },
+  "saveToCloud": {
+    "description": "Botón de guardar en la nube",
+    "message": "Guardar en la nube"
+  },
+  "searchSubtitle": {
+    "description": "Marcador de posición de búsqueda de subtítulo",
+    "message": "Buscar subtítulo..."
+  },
+  "searchUser": {
+    "description": "Marcador de posición de búsqueda de usuario",
+    "message": "Buscar usuario..."
+  },
+  "selectFile": {
+    "description": "Marcador de posición para seleccionar archivo",
+    "message": "Cliquea o arrastra un archivo"
+  },
+  "send": {
+    "description": "Botón de enviar",
+    "message": "Enviar"
+  },
+  "statusActionDone": {
+    "description": "Estado: acción completada",
+    "message": "Acción completada"
+  },
+  "statusAssReady": {
+    "description": "Estado: ASS listo",
+    "message": "✅ Archivo ASS listo (estilos preservados)"
+  },
+  "statusDeleted": {
+    "description": "Estado: eliminado",
+    "message": "✅ Subtítulo eliminado"
+  },
+  "statusDisconnected": {
+    "description": "Estado: desconectado",
+    "message": "ℹ️ Desconectado"
+  },
+  "statusDownloading": {
+    "description": "Estado: descargando",
+    "message": "⏳ Descargando subtítulo..."
+  },
+  "statusDuplicateLanguage": {
+    "description": "Estado: idioma duplicado",
+    "message": "❌ Ya existe un subtítulo en este idioma para este video"
+  },
+  "statusFileError": {
+    "description": "Estado: error de lectura de archivo",
+    "message": "❌ Error al leer el archivo"
+  },
+  "statusFormatNotSupported": {
+    "description": "Estado: formato no compatible",
+    "message": "❌ Formato no compatible. Usa: .ytt, .vtt, .srt, .ass o .ssa"
+  },
+  "statusInjectError": {
+    "description": "Estado: error de inyección",
+    "message": "❌ Error al inyectar"
+  },
+  "statusInjected": {
+    "description": "Estado: inyectado",
+    "message": "✅ ¡Subtítulo inyectado!"
+  },
+  "statusInjecting": {
+    "description": "Estado: inyectando",
+    "message": "⏳ Inyectando subtítulo..."
+  },
+  "statusLoginForCloud": {
+    "description": "Estado: inicio de sesión para nube",
+    "message": "ℹ️ Inicia sesión para acceder a la nube"
+  },
+  "statusLoginSuccess": {
+    "description": "Estado: inicio de sesión exitoso",
+    "message": "✅ ¡Inicio de sesión exitoso!"
+  },
+  "statusLoginTimeout": {
+    "description": "Estado: tiempo de inicio de sesión agotado",
+    "message": "❌ Tiempo de espera de inicio de sesión agotado"
+  },
+  "statusLoginToSave": {
+    "description": "Estado: iniciar sesión para guardar",
+    "message": "❌ Inicia sesión para guardar en la nube"
+  },
+  "statusOpenYouTube": {
+    "description": "Estado: abrir YouTube",
+    "message": "⚠️ Abre primero un video de YouTube"
+  },
+  "statusOpeningLogin": {
+    "description": "Estado: abriendo inicio de sesión",
+    "message": "⏳ Abriendo inicio de sesión..."
+  },
+  "statusReady": {
+    "description": "Estado: listo",
+    "message": "✅ Listo para inyectar subtítulo"
+  },
+  "statusReloadYouTube": {
+    "description": "Estado: recargar YouTube",
+    "message": "❌ Recarga la página de YouTube"
+  },
+  "statusRemoved": {
+    "description": "Estado: eliminado",
+    "message": "ℹ️ Subtítulo eliminado"
+  },
+  "statusRemovedAndBanned": {
+    "description": "Estado: eliminado y baneado",
+    "message": "Subtítulo eliminado y autor baneado"
+  },
+  "statusReportDismissed": {
+    "description": "Estado: reporte descartado",
+    "message": "Reporte descartado"
+  },
+  "statusSelectFile": {
+    "description": "Estado: seleccionar archivo",
+    "message": "ℹ️ Selecciona un archivo de subtítulos"
+  },
+  "statusSelectFileAndVideo": {
+    "description": "Estado: seleccionar archivo y video",
+    "message": "❌ Selecciona un archivo y abre un video"
+  },
+  "statusSrtConverted": {
+    "description": "Estado: SRT convertido",
+    "message": "🔄 SRT convertido a VTT"
+  },
+  "statusSubtitleDeleted": {
+    "description": "Estado: subtítulo eliminado",
+    "message": "Subtítulo eliminado"
+  },
+  "statusSubtitleRemoved": {
+    "description": "Estado: subtítulo eliminado",
+    "message": "Subtítulo eliminado"
+  },
+  "statusUploadSuccess": {
+    "description": "Estado: subida exitosa",
+    "message": "✅ ¡Subtítulo guardado en la nube!"
+  },
+  "statusUploading": {
+    "description": "Estado: subiendo",
+    "message": "⏳ Subiendo a la nube..."
+  },
+  "statusUserBanned": {
+    "description": "Estado: usuario baneado",
+    "message": "Usuario baneado"
+  },
+  "statusUserUnbanned": {
+    "description": "Estado: usuario desbaneado",
+    "message": "Usuario desbaneado"
+  },
+  "statusVttReady": {
+    "description": "Estado: VTT listo",
+    "message": "✅ Archivo VTT listo"
+  },
+  "statusWaitingDiscord": {
+    "description": "Estado: esperando Discord",
+    "message": "⏳ Esperando inicio de sesión de Discord..."
+  },
+  "statusYttReady": {
+    "description": "Estado: YTT listo",
+    "message": "✅ Archivo YTT listo"
+  },
+  "tabAdmin": {
+    "description": "Pestaña de administración",
+    "message": "ADM"
+  },
+  "tabCloud": {
+    "description": "Pestaña de subtítulos en la nube",
+    "message": "Nube"
+  },
+  "tabLocal": {
+    "description": "Pestaña de subtítulos locales",
+    "message": "Local"
+  },
+  "unban": {
+    "description": "Botón de desbanear",
+    "message": "Desbanear"
+  },
+  "useWithoutLogin": {
+    "description": "Sugerencia de uso sin inicio de sesión",
+    "message": "O usa sin iniciar sesión para inyectar subtítulos localmente"
+  },
+  "videoId": {
+    "description": "Etiqueta de ID del video",
+    "message": "ID del video:"
+  },
+  "viewVideo": {
+    "description": "Botón de ver video",
+    "message": "Ver video"
+  }
+}

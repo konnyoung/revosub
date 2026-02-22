@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RevoSub</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      max-width: 400px;
+      overflow-x: hidden;
+    }
+
+    body {
+      min-width: 340px;
+      padding: 16px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      color: #fff;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .header h1 {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .header span {
+      font-size: 11px;
+      color: #888;
+    }
+
+    /* Login Section */
+    .login-section {
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .login-section p {
+      color: #aaa;
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+
+    .btn-discord {
+      width: 100%;
+      padding: 12px 16px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      background: #5865F2;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-discord:hover {
+      background: #4752c4;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(88, 101, 242, 0.4);
+    }
+
+    .btn-discord svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* User Profile */
+    .user-profile {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 10px;
+      margin-bottom: 16px;
+    }
+
+    .user-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #5865F2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .user-avatar img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+
+    .user-info {
+      flex: 1;
+    }
+
+    .user-name {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .user-status {
+      font-size: 11px;
+      color: #2ecc71;
+    }
+
+    .btn-logout {
+      background: rgba(231, 76, 60, 0.2);
+      border: none;
+      color: #e74c3c;
+      padding: 6px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+
+    .btn-logout:hover {
+      background: rgba(231, 76, 60, 0.3);
+    }
+
+    /* Tabs */
+    .tabs {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 16px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 8px;
+      padding: 4px;
+    }
+
+    .tab {
+      flex: 1;
+      padding: 8px 12px;
+      border: none;
+      background: transparent;
+      color: #888;
+      font-size: 12px;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+
+    .tab.active {
+      background: rgba(231, 76, 60, 0.3);
+      color: #fff;
+    }
+
+    .tab:hover:not(.active) {
+      color: #fff;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    /* Status */
+    .status {
+      padding: 10px 12px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .status.success {
+      background: rgba(46, 204, 113, 0.2);
+      border: 1px solid rgba(46, 204, 113, 0.3);
+      color: #2ecc71;
+    }
+
+    .status.error {
+      background: rgba(231, 76, 60, 0.2);
+      border: 1px solid rgba(231, 76, 60, 0.3);
+      color: #e74c3c;
+    }
+
+    .status.info {
+      background: rgba(52, 152, 219, 0.2);
+      border: 1px solid rgba(52, 152, 219, 0.3);
+      color: #3498db;
+    }
+
+    .status.warning {
+      background: rgba(241, 196, 15, 0.2);
+      border: 1px solid rgba(241, 196, 15, 0.3);
+      color: #f1c40f;
+    }
+
+    /* File Input */
+    .file-input-wrapper {
+      position: relative;
+      margin-bottom: 12px;
+    }
+
+    .file-input {
+      display: none;
+    }
+
+    .file-label {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      border: 2px dashed rgba(255,255,255,0.2);
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .file-label:hover {
+      border-color: #e74c3c;
+      background: rgba(231, 76, 60, 0.1);
+    }
+
+    .file-label.has-file {
+      border-color: #2ecc71;
+      background: rgba(46, 204, 113, 0.1);
+    }
+
+    .file-label .icon {
+      font-size: 36px;
+      margin-bottom: 8px;
+    }
+
+    .file-label .text {
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    .file-label .filename {
+      font-size: 12px;
+      color: #2ecc71;
+      margin-top: 8px;
+      word-break: break-all;
+    }
+
+    /* Buttons */
+    .btn {
+      width: 100%;
+      padding: 12px 16px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(231, 76, 60, 0.4);
+    }
+
+    .btn-primary:disabled {
+      background: #444;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      margin-top: 8px;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    .btn-upload {
+      background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+      color: #fff;
+      margin-top: 8px;
+    }
+
+    .btn-upload:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(52, 152, 219, 0.4);
+    }
+
+    /* Cloud Subtitles */
+    .subtitle-list {
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    .subtitle-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 8px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .subtitle-item:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    .subtitle-item .icon {
+      font-size: 20px;
+    }
+
+    .subtitle-item .info {
+      flex: 1;
+    }
+
+    .subtitle-item .name {
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .subtitle-item .meta {
+      font-size: 11px;
+      color: #888;
+    }
+
+    .subtitle-item .actions {
+      display: flex;
+      gap: 6px;
+    }
+
+    .subtitle-item .action-btn {
+      background: rgba(255,255,255,0.1);
+      border: none;
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 11px;
+    }
+
+    .subtitle-item .action-btn:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    .subtitle-item .action-btn.delete {
+      color: #e74c3c;
+    }
+
+    /* Upload Section */
+    .upload-section {
+      margin-top: 12px;
+      padding: 12px;
+      background: rgba(52, 152, 219, 0.1);
+      border-radius: 8px;
+      border: 1px solid rgba(52, 152, 219, 0.2);
+    }
+
+    .upload-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .lang-select {
+      flex: 1;
+      padding: 10px 12px;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 6px;
+      background: rgba(0,0,0,0.3);
+      color: #fff;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .lang-select option {
+      background: #1a1a2e;
+      color: #fff;
+    }
+
+    .checkbox-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: #aaa;
+      margin-bottom: 10px;
+    }
+
+    .checkbox-row input {
+      accent-color: #3498db;
+    }
+
+    /* Video Info */
+    .video-info {
+      margin-top: 12px;
+      padding: 8px 12px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 6px;
+      font-size: 11px;
+      color: #888;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .video-info strong {
+      color: #3498db;
+      font-family: monospace;
+    }
+
+    /* Current Subtitle */
+    .current-subtitle {
+      margin-top: 16px;
+      padding: 12px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 8px;
+    }
+
+    .current-subtitle h3 {
+      font-size: 12px;
+      color: #888;
+      margin-bottom: 8px;
+    }
+
+    .current-subtitle .name {
+      font-size: 13px;
+      color: #2ecc71;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Empty State */
+    .empty-state {
+      text-align: center;
+      padding: 30px 20px;
+      color: #666;
+    }
+
+    .empty-state .icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .empty-state p {
+      font-size: 13px;
+    }
+
+    /* Loader */
+    .loader {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .formats {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 11px;
+      color: #666;
+    }
+
+    .formats strong {
+      color: #888;
+    }
+
+    /* Admin Panel Styles */
+    .tab-admin {
+      background: #ff4757 !important;
+      color: #fff !important;
+    }
+
+    .tab-admin:hover {
+      background: #ff6b81 !important;
+    }
+
+    .admin-subtabs {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 12px;
+      background: rgba(0,0,0,0.2);
+      border-radius: 8px;
+      padding: 4px;
+    }
+
+    .admin-subtab {
+      flex: 1;
+      padding: 8px;
+      border: none;
+      background: transparent;
+      color: #888;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .admin-subtab:hover {
+      color: #fff;
+      background: rgba(255,255,255,0.1);
+    }
+
+    .admin-subtab.active {
+      background: #ff4757;
+      color: #fff;
+    }
+
+    .admin-tab-content {
+      display: none;
+    }
+
+    .admin-tab-content.active {
+      display: block;
+    }
+
+    .admin-search {
+      margin-bottom: 12px;
+    }
+
+    .admin-search input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      background: rgba(0,0,0,0.3);
+      color: #fff;
+      font-size: 13px;
+    }
+
+    .admin-search input::placeholder {
+      color: #666;
+    }
+
+    .admin-search input:focus {
+      outline: none;
+      border-color: #ff4757;
+    }
+
+    .admin-list {
+      max-height: 350px;
+      overflow-y: auto;
+    }
+
+    .admin-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 8px;
+      margin-bottom: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .admin-item:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    .admin-item.banned {
+      opacity: 0.5;
+      background: rgba(255, 71, 87, 0.1);
+    }
+
+    .admin-item .avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #5865F2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 600;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .admin-item .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .admin-item .info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .admin-item .name {
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .admin-item .meta {
+      font-size: 11px;
+      color: #888;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .admin-item .actions {
+      display: flex;
+      gap: 4px;
+    }
+
+    .btn-ban {
+      padding: 6px 10px;
+      border: none;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      background: #ff4757;
+      color: #fff;
+      transition: all 0.2s ease;
+    }
+
+    .btn-ban:hover {
+      background: #ff6b81;
+    }
+
+    .btn-unban {
+      background: #2ed573;
+    }
+
+    .btn-unban:hover {
+      background: #7bed9f;
+    }
+
+    .btn-delete-admin {
+      padding: 6px 10px;
+      border: none;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      background: #ff4757;
+      color: #fff;
+      transition: all 0.2s ease;
+    }
+
+    .btn-delete-admin:hover {
+      background: #ff6b81;
+    }
+
+    .admin-stats {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .admin-stat {
+      flex: 1;
+      padding: 10px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .admin-stat .number {
+      font-size: 20px;
+      font-weight: 700;
+      color: #ff4757;
+    }
+
+    .admin-stat .label {
+      font-size: 10px;
+      color: #888;
+      text-transform: uppercase;
+    }
+
+    /* Admin Badge */
+    .admin-badge {
+      display: inline-block;
+      background: #ff4757;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 10px;
+      margin-left: 4px;
+    }
+
+    /* Admin Filter */
+    .admin-filter {
+      margin-bottom: 12px;
+    }
+
+    .admin-filter select {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      background: rgba(0,0,0,0.3);
+      color: #fff;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .admin-filter select:focus {
+      outline: none;
+      border-color: #ff4757;
+    }
+
+    /* Report Item Styles */
+    .report-item {
+      background: rgba(255,255,255,0.05);
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 8px;
+      border-left: 3px solid #ff4757;
+    }
+
+    .report-item.resolved {
+      border-left-color: #2ed573;
+      opacity: 0.7;
+    }
+
+    .report-item.dismissed {
+      border-left-color: #666;
+      opacity: 0.5;
+    }
+
+    .report-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .report-reason {
+      font-size: 12px;
+      font-weight: 600;
+      color: #ff4757;
+      text-transform: uppercase;
+    }
+
+    .report-date {
+      font-size: 11px;
+      color: #666;
+    }
+
+    .report-info {
+      font-size: 12px;
+      color: #aaa;
+      margin-bottom: 8px;
+    }
+
+    .report-info strong {
+      color: #fff;
+    }
+
+    .report-description {
+      font-size: 12px;
+      color: #888;
+      font-style: italic;
+      margin-bottom: 10px;
+      padding: 8px;
+      background: rgba(0,0,0,0.2);
+      border-radius: 6px;
+    }
+
+    .report-actions {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .btn-report-action {
+      padding: 6px 10px;
+      border: none;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-dismiss {
+      background: #444;
+      color: #fff;
+    }
+
+    .btn-dismiss:hover {
+      background: #555;
+    }
+
+    .btn-remove {
+      background: #ff4757;
+      color: #fff;
+    }
+
+    .btn-remove:hover {
+      background: #ff6b81;
+    }
+
+    .btn-remove-ban {
+      background: #c0392b;
+      color: #fff;
+    }
+
+    .btn-remove-ban:hover {
+      background: #e74c3c;
+    }
+
+    .btn-video {
+      background: #3498db;
+      color: #fff;
+    }
+
+    .btn-video:hover {
+      background: #5dade2;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="icons/revosub-logo.png" alt="RevoSub" style="width: 32px; height: 32px;">
+    <div>
+      <h1>RevoSub</h1>
+      <span data-i18n="extensionDescription">Legendas estilizadas no YouTube</span>
+    </div>
+  </div>
+
+  <!-- Login Section (shown when not logged in) -->
+  <div id="loginSection" class="login-section">
+    <p data-i18n="loginTitle">Faça login para salvar e acessar suas legendas na nuvem</p>
+    <button id="discordLoginBtn" class="btn-discord">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+      </svg>
+      <span data-i18n="loginWithDiscord">Entrar com Discord</span>
+    </button>
+    <p style="margin-top: 16px; font-size: 11px; color: #666;" data-i18n="useWithoutLogin">
+      Ou use sem login para injetar legendas localmente
+    </p>
+  </div>
+
+  <!-- User Profile (shown when logged in) -->
+  <div id="userProfile" class="user-profile hidden">
+    <div class="user-avatar" id="userAvatar">?</div>
+    <div class="user-info">
+      <div class="user-name" id="userName"></div>
+      <div class="user-status" data-i18n="connected">Conectado</div>
+    </div>
+    <button id="logoutBtn" class="btn-logout" data-i18n="logout">Sair</button>
+  </div>
+
+  <!-- Tabs (shown when logged in) -->
+  <div id="tabsSection" class="tabs hidden">
+    <button class="tab active" data-tab="local" data-i18n="tabLocal">Local</button>
+    <button class="tab" data-tab="cloud" data-i18n="mySubtitles">Minhas Legendas</button>
+    <button class="tab tab-admin hidden" id="adminTab" data-tab="admin" data-i18n="tabAdmin">ADM</button>
+  </div>
+
+  <!-- Tab Content: Local -->
+  <div id="tabLocal" class="tab-content active">
+    <div id="status" class="status info">
+      <span id="statusText" data-i18n="statusSelectFile">Selecione um arquivo de legenda</span>
+    </div>
+
+    <div class="file-input-wrapper">
+      <input type="file" id="fileInput" class="file-input">
+      <label for="fileInput" class="file-label" id="fileLabel">
+        <span class="icon">⬆</span>
+        <span class="text" data-i18n="selectFile">Clique ou arraste um arquivo</span>
+        <span class="filename hidden" id="fileName"></span>
+      </label>
+    </div>
+
+    <button id="injectBtn" class="btn btn-primary" disabled>
+      <span data-i18n="injectSubtitle">Injetar Legenda</span>
+    </button>
+
+    <!-- Upload to Cloud (shown when logged in and file selected) -->
+    <div id="uploadSection" class="upload-section hidden">
+      <div class="upload-row">
+        <select id="langSelect" class="lang-select">
+          <option value="pt-BR">Português (BR)</option>
+          <option value="pt-PT">Português (PT)</option>
+          <option value="en-US">English (US)</option>
+          <option value="en-GB">English (UK)</option>
+          <option value="es-ES">Español (España)</option>
+          <option value="es-MX">Español (México)</option>
+          <option value="fr-FR">Français</option>
+          <option value="de-DE">Deutsch</option>
+          <option value="it-IT">Italiano</option>
+          <option value="ja-JP">日本語</option>
+          <option value="ko-KR">한국어</option>
+          <option value="zh-CN">中文 (简体)</option>
+          <option value="zh-TW">中文 (繁體)</option>
+          <option value="ru-RU">Русский</option>
+          <option value="ar-SA">العربية</option>
+          <option value="tr-TR">Türkçe</option>
+          <option value="id-ID">Bahasa Indonesia</option>
+          <option value="th-TH">ไทย</option>
+          <option value="vi-VN">Tiếng Việt</option>
+          <option value="pl-PL">Polski</option>
+          <option value="nl-NL">Nederlands</option>
+          <option value="sv-SE">Svenska</option>
+          <option value="da-DK">Dansk</option>
+          <option value="no-NO">Norsk</option>
+          <option value="fi-FI">Suomi</option>
+          <option value="cs-CZ">Čeština</option>
+          <option value="hu-HU">Magyar</option>
+          <option value="ro-RO">Română</option>
+          <option value="el-GR">Ελληνικά</option>
+          <option value="he-IL">עברית</option>
+          <option value="hi-IN">हिन्दी</option>
+          <option value="bn-BD">বাংলা</option>
+          <option value="uk-UA">Українська</option>
+          <option value="ms-MY">Bahasa Melayu</option>
+          <option value="tl-PH">Tagalog</option>
+          <option value="fa-IR">فارسی</option>
+        </select>
+      </div>
+      <div class="checkbox-row">
+        <input type="checkbox" id="isPublic" checked>
+        <label for="isPublic" data-i18n="publicSubtitle">Legenda pública</label>
+      </div>
+      <button id="uploadBtn" class="btn btn-upload">
+        <span data-i18n="saveToCloud">Salvar na Nuvem</span>
+      </button>
+    </div>
+
+    <button id="removeBtn" class="btn btn-secondary hidden">
+      <span data-i18n="removeSubtitle">Remover Legenda</span>
+    </button>
+
+    <div id="videoInfo" class="video-info hidden">
+      <span data-i18n="videoId">Video ID:</span> <strong id="videoId"></strong>
+    </div>
+
+    <div id="currentSubtitle" class="current-subtitle hidden">
+      <h3 data-i18n="activeSubtitle">Legenda Ativa:</h3>
+      <div class="name">
+        <span id="currentName"></span>
+      </div>
+    </div>
+
+    <div class="formats">
+      <strong data-i18n="formats">Formatos:</strong> .ytt, .vtt, .srt, .ass
+    </div>
+  </div>
+
+  <!-- Tab Content: Cloud (My Subtitles) -->
+  <div id="tabCloud" class="tab-content">
+    <div id="mySubtitlesList" class="subtitle-list">
+      <div class="empty-state">
+        <div class="icon"></div>
+        <p data-i18n="loadingSubtitles">Carregando suas legendas...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tab Content: Admin Panel -->
+  <div id="tabAdmin" class="tab-content">
+    <!-- Admin Sub-tabs -->
+    <div class="admin-subtabs">
+      <button class="admin-subtab active" data-admin-tab="users" data-i18n="adminUsers">Usuários</button>
+      <button class="admin-subtab" data-admin-tab="subtitles" data-i18n="adminSubtitles">Legendas</button>
+      <button class="admin-subtab" data-admin-tab="reports"><span data-i18n="adminReports">Denúncias</span> <span id="reportsBadge" class="admin-badge hidden">0</span></button>
+    </div>
+
+    <!-- Admin: Users List -->
+    <div id="adminUsers" class="admin-tab-content active">
+      <div class="admin-search">
+        <input type="text" id="adminUserSearch" data-i18n-placeholder="searchUser" placeholder="Buscar usuário...">
+      </div>
+      <div id="adminUsersList" class="admin-list">
+        <div class="empty-state">
+          <p data-i18n="loadingUsers">Carregando usuários...</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Admin: Subtitles List -->
+    <div id="adminSubtitles" class="admin-tab-content">
+      <div class="admin-search">
+        <input type="text" id="adminSubtitleSearch" data-i18n-placeholder="searchSubtitle" placeholder="Buscar legenda...">
+      </div>
+      <div id="adminSubtitlesList" class="admin-list">
+        <div class="empty-state">
+          <p data-i18n="loadingAdminSubtitles">Carregando legendas...</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Admin: Reports List -->
+    <div id="adminReports" class="admin-tab-content">
+      <div class="admin-filter">
+        <select id="adminReportFilter">
+          <option value="pending" data-i18n="filterPending">Pendentes</option>
+          <option value="all" data-i18n="filterAll">Todas</option>
+          <option value="resolved" data-i18n="filterResolved">Resolvidas</option>
+          <option value="dismissed" data-i18n="filterDismissed">Ignoradas</option>
+        </select>
+      </div>
+      <div id="adminReportsList" class="admin-list">
+        <div class="empty-state">
+          <p data-i18n="loadingReports">Carregando denúncias...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
